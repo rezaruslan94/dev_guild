@@ -17,6 +17,11 @@
   </div>
 
   <div class="field">
+  <%= f.label :category %>
+  <%= f.collection_select(:category_id, Category.all, :id, :name, include_blank: true) %>
+  </div>
+
+  <div class="field">
     <%= f.label :description %>
     <%= f.text_field :description %>
   </div>
@@ -29,4 +34,5 @@
   <div class="actions">
     <%= f.submit %>
   </div>
+
 <% end %>
